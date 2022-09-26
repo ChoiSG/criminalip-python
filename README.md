@@ -1,5 +1,7 @@
 # CriminalIP-Python 
 
+> 한국어 리드미: [README.kor.md](README.kor.md)
+
 Unofficial python CLI for [CriminalIP.io](https://www.criminalip.io) API v1. 
 Both CriminalIP (API) and this CLI is in early stage, so be aware. 
 
@@ -102,3 +104,6 @@ cip scan-result <scanid-from-request-scan>
 cip scan-result 2188259
 cip scan-result 2188259 --progress 
 ```
+
+### Special Thanks 
+- BoanProject- Cho Jeongwon 

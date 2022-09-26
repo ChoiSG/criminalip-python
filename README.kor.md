@@ -1,6 +1,6 @@
 # CriminalIP-Python 
 
-AI Spera 사가 개발하고 운영하는 [CriminalIP.io](https://www.criminalip.io) 플랫폼의 비공식 파이썬 CLI 프로그램입니다. 
+[AI Spera](https://www.criminalip.io/about/aispera)사가 개발하고 운영하는 [CriminalIP.io](https://www.criminalip.io) 플랫폼의 비공식 파이썬 CLI 프로그램입니다. 
 CriminalIP의 API와 이 CLI 프로그램 모두 개발 초기 단계이기 때문에 이를 유의하시기 바랍니다. 
 
 ## 전제 조건 
@@ -102,4 +102,7 @@ cip request-scan blog.sunggwanchoi.com
 cip scan-result <scanid-from-request-scan>
 cip scan-result 2188259
 cip scan-result 2188259 --progress 
+```
 
+## Special Thanks 
+- [보안프로젝트 조정원 대표님](https://www.youtube.com/user/ngnicky1209)
