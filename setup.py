@@ -1,7 +1,7 @@
 # setup.py template from Certipy @ly4k - https://github.com/ly4k/Certipy
 from setuptools import find_packages, setup
 
-with open("README.md") as f:
+with open("README.md", encoding="utf8") as f:
     readme = f.read()
 
 setup(
