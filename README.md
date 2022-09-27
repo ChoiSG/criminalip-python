@@ -29,7 +29,7 @@ pipx install .
 ```
 
 **Error Resolution**
-is not on your PATH environment variable error caused by using venv
+- is not on your PATH environment variable error caused by using venv
 ```
 pipx ensurepath
 ```

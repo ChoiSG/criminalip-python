@@ -27,7 +27,7 @@ pipx install .
 ```
 
 **Error Resolution**
-venv 사용으로 인한 is not on your PATH environment variable 에러 발생시
+- venv 사용으로 인한 is not on your PATH environment variable 에러 발생시
 ```
 pipx ensurepath
 ```
