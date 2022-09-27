@@ -26,6 +26,12 @@ git clone https://github.com/ChoiSG/criminalip-python.git
 pipx install .
 ```
 
+**Error Resolution**
+venv 사용으로 인한 is not on your PATH environment variable 에러 발생시
+```
+pipx ensurepath
+```
+
 설치 후 `cip init` 을 이용해 API 키를 등록합니다.
 
 **Uninstallation** 

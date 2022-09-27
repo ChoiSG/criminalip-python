@@ -28,6 +28,12 @@ git clone https://github.com/ChoiSG/criminalip-python.git
 pipx install .
 ```
 
+**Error Resolution**
+is not on your PATH environment variable error caused by using venv
+```
+pipx ensurepath
+```
+
 Run `cip init` with your API key after isntallation. 
 
 **Uninstallation** 
