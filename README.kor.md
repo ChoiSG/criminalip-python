@@ -14,8 +14,7 @@ CriminalIP의 API와 이 CLI 프로그램 모두 개발 초기 단계이기 때�
 ```
 python3 -m pip install pipx 
 pipx ensurepath
-git clone https://github.com/ChoiSG/criminalip-python.git 
-pipx install . 
+pipx install git+https://github.com/ChoiSG/criminalip-python.git 
 ```
 
 **Windows** 

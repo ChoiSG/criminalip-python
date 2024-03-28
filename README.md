@@ -16,8 +16,7 @@ Visit [CriminalIP.io](https://www.criminalip.io) and register, use the "Beta Mem
 ```
 python3 -m pip install pipx 
 pipx ensurepath
-git clone https://github.com/ChoiSG/criminalip-python.git 
-pipx install . 
+pipx install git+https://github.com/ChoiSG/criminalip-python.git 
 ```
 
 **Windows** 

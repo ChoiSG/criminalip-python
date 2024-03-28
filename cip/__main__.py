@@ -3,7 +3,7 @@ Main CLI module for CriminalIP-python.
 """
 
 import asyncio 
-import click
+import asyncclick as click
 import json
 import os 
 import logging 
@@ -14,15 +14,6 @@ from cip.CriminalIP import *
 from rich import print_json
 from functools import update_wrapper
 from cip.helpers import * 
-
-# Bless: https://github.com/pallets/click/issues/85#issuecomment-43378930
-def async_coroutine(f):
-    warnings.filterwarnings("ignore", category=DeprecationWarning)
-    f = asyncio.coroutine(f)
-    def wrapper(*args, **kwargs):
-        loop = asyncio.get_event_loop()
-        return loop.run_until_complete(f(*args, **kwargs))
-    return update_wrapper(wrapper, f)
 
 ##############################################################
 # __main__ section for actual CLI 
@@ -108,8 +99,7 @@ def request_scan(domain, verbose):
 @click.option('--full', is_flag=True, default=False, help="Show full data")
 @click.option('--output', '-o', default=None, help="Output filename")
 @click.option('--verbose', '-v', is_flag=True, default=False, help="Verbose mode")
-@async_coroutine
-def ip(ip, filename, full, output, verbose):
+async def ip(ip, filename, full, output, verbose):
     """ Get information about an IP address """
     if (verbose): logging.basicConfig(level=logging.INFO)
 
@@ -120,7 +110,7 @@ def ip(ip, filename, full, output, verbose):
 
     if filename is not None:
         logging.info(f"[+] Using filename {filename}")
-        data = yield from api.async_request("/ip/data", filename)
+        data = await api.async_request("/ip/data", filename)
     else:
         logging.info(f"[+] Using IP address {ip}")
 
@@ -189,8 +179,7 @@ def search(search, limit, offset, output, verbose):
 @click.option('--output', '-o', default=None, help="Output file name")
 @click.option('--verbose', '-v', is_flag=True, help="Verbose mode")
 @click.option('--full', is_flag=True, default=False, help="Show full data")
-@async_coroutine
-def vpn(ip, filename, output, full, verbose):
+async def vpn(ip, filename, output, full, verbose):
     """ Check VPN/Proxy status of an IP address"""
     if verbose: logging.basicConfig(level=logging.INFO)
 
@@ -202,7 +191,7 @@ def vpn(ip, filename, output, full, verbose):
     # Multiple targets - Using asyncio 
     if filename is not None:
         logging.info(f"[+] Using filename: {filename}")
-        data = yield from api.async_request("/ip/vpn", filename)    
+        data = await api.async_request("/ip/vpn", filename)    
 
     # Single target 
     else:
@@ -225,4 +214,4 @@ def vpn(ip, filename, output, full, verbose):
             click.echo(click.style(f"\n[+] Search results written to {output}", fg="green"))
 
 if __name__ == '__main__':
-    main()
+    main(_anyio_backend="asyncio")

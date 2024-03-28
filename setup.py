@@ -12,7 +12,7 @@ setup(
     url="https://github.com/ChoiSG/criminalip-python",
     long_description=readme,
     install_requires=[
-	    "Click",
+	    "asyncclick",
 	    "requests",
 	    "aiohttp",
 	    "asyncio",
