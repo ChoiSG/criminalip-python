@@ -1,3 +1,7 @@
+# DEPRECATED 
+
+This project has been deprecated, and will no longer be maintained. 
+
 # CriminalIP-Python 
 
 > 한국어 리드미: [README.kor.md](README.kor.md)

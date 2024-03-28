@@ -1,3 +1,8 @@
+# DEPRECATED 
+
+This project has been deprecated, and will no longer be maintained. 
+
+
 # CriminalIP-Python 
 
 [AI Spera](https://www.criminalip.io/about/aispera)사가 개발하고 운영하는 [CriminalIP.io](https://www.criminalip.io) 플랫폼의 비공식 파이썬 CLI 프로그램입니다. 
